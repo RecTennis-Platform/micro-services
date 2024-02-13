@@ -1,0 +1,6 @@
+[submodule "payment"]
+	path = payment
+	url = https://github.com/RecTennis-Platform/payment.git
+[submodule "auth"]
+	path = auth
+	url = https://github.com/RecTennis-Platform/auth.git
