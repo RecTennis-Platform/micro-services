@@ -4,3 +4,6 @@
 [submodule "auth"]
 	path = auth
 	url = https://github.com/RecTennis-Platform/auth.git
+[submodule "core"]
+	path = core
+	url = https://github.com/RecTennis-Platform/core
