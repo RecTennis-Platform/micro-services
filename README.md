@@ -16,7 +16,7 @@ Fully managed Microservices starter pack using **NestJS / RabbitMQ**. created wi
 
 ## Get started Notes:
 
-- Use `git submodule update --init --recursive` command to update/fetch submodules.
+- Use `git submodule update --remote --init` command to update/fetch submodules.
 - `kong.yml` from `kong/conf/kong.yml` file is configured for api gateway.
 - Kong development server endpoint will start on port `8000`.
 - Health endpoint: `host:port/api/health`
