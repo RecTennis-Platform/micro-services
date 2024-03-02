@@ -4,7 +4,7 @@ _transform: true
 services:
   - name: auth_service
     host: auth
-    port: 3001
+    port: 8081
     protocol: http
     routes:
       - name: auth_route
@@ -13,12 +13,21 @@ services:
         strip_path: true
   - name: payment_service
     host: payment
-    port: 3002
+    port: 8083
     protocol: http
     routes:
       - name: payment_route
         paths:
           - /payment
+        strip_path: true
+  - name: core_service
+    host: core
+    port: 8080
+    protocol: http
+    routes:
+      - name: core_route
+        paths:
+          - /core
         strip_path: true
 plugins:
   - name: rate-limiting

@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     restart: on-failure
     ports:
-      - "3001:3001"
+      - "8081:8081"
     env_file:
       - ./auth/.env
     networks:
@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile
     restart: on-failure
     ports:
-      - "3002:3002"
+      - "8083:8083"
     env_file:
       - ./payment/.env
     networks:
@@ -34,6 +34,20 @@ services:
     volumes:
       - ./payment:/app/payment
       - /app/payment/node_modules
+  core:
+    build:
+      context: ./core
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./core/.env
+    networks:
+      - backend
+    volumes:
+      - ./core:/app/core
+      - /app/core/node_modules
     logging:
       driver: fluentd
       options:
