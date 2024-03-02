@@ -8,5 +8,5 @@
 	branch = dev
 [submodule "core"]
 	path = core
-	url = https://github.com/RecTennis-Platform/core
+	url = https://github.com/RecTennis-Platform/core.git
 	branch = dev
